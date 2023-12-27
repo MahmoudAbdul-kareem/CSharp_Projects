@@ -1,3 +1,4 @@
+using System.Drawing;
 using System.Text;
 
 namespace MyProject.PasswordManager;
@@ -82,8 +83,10 @@ public class App
                     break;
                 }
                 else if (0 != numberOfTries)
-                {
+                {   
+                    Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine($"Password NOT correct! - [{numberOfTries}] available tries");
+                    Console.ForegroundColor = ConsoleColor.White;
                     Console.WriteLine("-------------------------------------------");
                     numberOfTries--;
                 }
